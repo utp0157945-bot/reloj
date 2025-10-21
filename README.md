@@ -1,4 +1,4 @@
-# Reloj Digital
+# 🕒 Reloj Digital
 
 Este proyecto consiste en un **reloj digital interactivo** desarrollado con **JavaScript, HTML y CSS**, que muestra la hora actual actualizándose en tiempo real dentro de una página web.  
 Incluye **pruebas automatizadas con Jest** para asegurar el correcto funcionamiento de las funciones principales del reloj.
@@ -29,25 +29,24 @@ Está diseñado con una interfaz limpia y moderna, enfocada en la **precisión y
 
 ## Pruebas Automatizadas
 
-Las pruebas se encuentran en **`test/reloj.test.js`** y validan:
+Las pruebas se encuentran en **`test/reloj.test.js`** y validan diferentes aspectos del reloj.
 
-| Nº | Prueba | Descripción | Resultado |
-|----|--------|-------------|------------|
-| 1 | **Formato de hora** | Verifica que la hora tenga formato `HH:MM:SS`. | ✅ Aprobada |
-| 2 | **Actualización** | Comprueba que el reloj muestre la hora en el HTML. | ✅ Aprobada |
-| 3 | **Rendimiento** | Evalúa que la función se ejecute rápidamente. | ✅ Aprobada |
+| Nº | Prueba | Definición | Breve Descripción | Resultado |
+|----|--------|------------|-----------------|------------|
+| 1 | **Formato de hora** | Prueba unitaria | Verifica que la función `obtenerHoraActual()` retorne la hora en formato correcto `HH:MM:SS`. | ✅ Aprobada |
+| 2 | **Actualización del reloj** | Prueba de integración | Comprueba que la función `actualizarReloj()` modifique correctamente el contenido del elemento HTML que muestra la hora y la fecha. | ✅ Aprobada |
+| 3 | **Rendimiento** | Prueba de rendimiento | Evalúa que la función `obtenerHoraActual()` se ejecute rápidamente, incluso cuando se llama miles de veces seguidas. | ✅ Aprobada |
 
 **Resumen de resultados:**
-```
-PASS  test/reloj.test.js
+
+PASS test/reloj.test.js
 ✓ 3 pruebas superadas
 Tiempo total: 2.6 s
-```
+
 
 ---
 
 ## Autores
 
-**Hugo Gonzalez Dominguez**
+**Hugo Gonzalez Dominguez**  
 **Aylin Romina Lugo Becerra**
-
