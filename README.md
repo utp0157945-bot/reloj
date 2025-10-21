@@ -1,11 +1,11 @@
-# 🕒 Reloj Digital
+# Reloj Digital
 
 Este proyecto consiste en un **reloj digital interactivo** desarrollado con **JavaScript, HTML y CSS**, que muestra la hora actual actualizándose en tiempo real dentro de una página web.  
 Incluye **pruebas automatizadas con Jest** para asegurar el correcto funcionamiento de las funciones principales del reloj.
 
 ---
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 El **Reloj Digital** muestra la hora en formato **HH:MM:SS** y se actualiza automáticamente cada segundo.  
 Está diseñado con una interfaz limpia y moderna, enfocada en la **precisión y rendimiento**.
@@ -17,7 +17,7 @@ Está diseñado con una interfaz limpia y moderna, enfocada en la **precisión y
 
 ---
 
-## ⚙️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **HTML5** → estructura base del reloj.  
 - **CSS3** → diseño y estilo responsivo.  
@@ -27,9 +27,27 @@ Está diseñado con una interfaz limpia y moderna, enfocada en la **precisión y
 
 ---
 
-## 🧩 Instalación
+## Pruebas Automatizadas
 
-1. Clona este repositorio:
+Las pruebas se encuentran en **`test/reloj.test.js`** y validan:
 
-   ```bash
-   git clone https://github.com/usuario/reloj-digital.git
+| Nº | Prueba | Descripción | Resultado |
+|----|--------|-------------|------------|
+| 1 | **Formato de hora** | Verifica que la hora tenga formato `HH:MM:SS`. | ✅ Aprobada |
+| 2 | **Actualización** | Comprueba que el reloj muestre la hora en el HTML. | ✅ Aprobada |
+| 3 | **Rendimiento** | Evalúa que la función se ejecute rápidamente. | ✅ Aprobada |
+
+**Resumen de resultados:**
+```
+PASS  test/reloj.test.js
+✓ 3 pruebas superadas
+Tiempo total: 2.6 s
+```
+
+---
+
+## Autores
+
+**Hugo Gonzalez Dominguez**
+**Aylin Romina Lugo Becerra**
+
