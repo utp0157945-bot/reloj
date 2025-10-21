@@ -26,64 +26,28 @@ Está diseñado con una interfaz limpia y moderna, enfocada en la **precisión y
 - **Node.js** → entorno de ejecución para las pruebas.
 
 ---
+<img width="1273" height="896" alt="Captura de pantalla 2025-10-21 173050" src="https://github.com/user-attachments/assets/8264b824-61be-45f9-bacf-13bbdc0a5fc7" />
+
+---
 
 ## Pruebas Automatizadas
 
 Las pruebas se encuentran en **`test/reloj.test.js`** y validan diferentes aspectos del reloj.
 
-| Nº | Prueba | Definición | Breve Descripción | Código de implementación | Resultado |
-|----|--------|------------|-----------------|-------------------------|------------|
-| 1 | **Formato de hora** | Prueba unitaria | Verifica que la función `obtenerHoraActual()` retorne la hora en formato correcto `HH:MM:SS`. | ```javascript
-const { obtenerHoraActual } = require('../reloj');
-
-test('la hora debe tener formato HH:MM:SS', () => {
-  const hora = obtenerHoraActual();
-  expect(hora).toMatch(/^\d{2}:\d{2}:\d{2}$/);
-});
-``` | ✅ Aprobada |
-| 2 | **Actualización del reloj** | Prueba de integración | Comprueba que la función `actualizarReloj()` modifique correctamente el contenido del elemento HTML que muestra la hora y la fecha. | ```javascript
-const { actualizarReloj } = require('../reloj');
-
-test('actualizarReloj debe modificar el contenido del div con la hora', () => {
-  document.body.innerHTML = `
-    <div id="hora"></div>
-    <p id="fecha"></p>
-  `;
-
-  actualizarReloj();
-
-  const contenido = document.getElementById('hora').textContent;
-  expect(contenido).toMatch(/^\d{2}:\d{2}:\d{2}$/);
-});
-``` | ✅ Aprobada |
-| 3 | **Rendimiento** | Prueba de rendimiento | Evalúa que la función `obtenerHoraActual()` se ejecute rápidamente, incluso cuando se llama miles de veces seguidas. | ```javascript
-const { obtenerHoraActual } = require('../reloj');
-
-test('la función obtenerHoraActual debe ejecutarse rápidamente', () => {
-  const inicio = performance.now();
-
-  for (let i = 0; i < 100000; i++) {
-    obtenerHoraActual();
-  }
-
-  const fin = performance.now();
-  const duracion = fin - inicio;
-
-  console.log(`Duración: ${duracion.toFixed(2)} ms`);
-  expect(duracion).toBeLessThan(500);
-});
-``` | ✅ Aprobada |
-
----
+| Nº | Prueba | Definición | Breve Descripción | Resultado |
+|----|--------|------------|-----------------|------------|
+| 1 | **Formato de hora** | Prueba unitaria | Verifica que la función `obtenerHoraActual()` retorne la hora en formato correcto `HH:MM:SS`. | ✅ Aprobada |
+| 2 | **Actualización del reloj** | Prueba de integración | Comprueba que la función `actualizarReloj()` modifique correctamente el contenido del elemento HTML que muestra la hora y la fecha. | ✅ Aprobada |
+| 3 | **Rendimiento** | Prueba de rendimiento | Evalúa que la función `obtenerHoraActual()` se ejecute rápidamente, incluso cuando se llama miles de veces seguidas. | ✅ Aprobada |
 
 **Resumen de resultados:**
-````
-
+```
 PASS  test/reloj.test.js
 ✓ 3 pruebas superadas
 Tiempo total: 2.6 s
-
 ```
+
+---
 
 ## Autores
 
