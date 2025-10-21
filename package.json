@@ -1,0 +1,16 @@
+{
+  "name": "reloj-digital",
+  "version": "1.0.0",
+  "description": "Proyecto sencillo con pruebas unitarias, integración y rendimiento.",
+  "main": "reloj.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
