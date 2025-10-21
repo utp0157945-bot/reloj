@@ -26,7 +26,9 @@ Está diseñado con una interfaz limpia y moderna, enfocada en la **precisión y
 - **Node.js** → entorno de ejecución para las pruebas.
 
 ---
+<img width="1273" height="896" alt="image" src="https://github.com/user-attachments/assets/e2eaf32f-b036-45f5-9c5b-d42a8057bc8d" />
 
+---
 ## Pruebas Automatizadas
 
 Las pruebas se encuentran en **`test/reloj.test.js`** y validan diferentes aspectos del reloj.
